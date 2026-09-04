@@ -688,7 +688,7 @@
                     <summary>2. วิธีผสมยา (Preparation)</summary>
                     <div class="details-content">
                         <ul>
-                            <li>ใช้ D5W เจือจางเท่านั้น (เช่นเดียวกับ Norepinephrine)</li>
+                            <li>ใช้ D5W หรือ NSS เจือจาง (ตาม Standing Order — ต่างจาก Norepinephrine ที่ห้ามใช้ NSS)</li>
                             <li><strong>สูตร 4:250 (16 mcg/mL):</strong> D5W 250 mL ดูดออก 4 mL เติม Epinephrine 4 amp (4 mg)</li>
                             <li><strong>สูตร 4:100 (40 mcg/mL):</strong> D5W 100 mL ดูดออก 4 mL เติม Epinephrine 4 amp (4 mg) — Central line เท่านั้น</li>
                             <li>ยาไวต่อแสงและออกซิเดชัน สังเกตสีสารละลายก่อนใช้ทุกครั้ง ห้ามใช้หากเปลี่ยนสีชมพู/น้ำตาล หรือมีตะกอน</li>
@@ -758,7 +758,7 @@
                 <li>Erstad BL, Barletta JF. Drug dosing in the critically ill obese patient. Crit Care. 2021;25:77.</li>
             </ol>
             <div class="approval-note">
-                ยาทั้ง 4 ชนิดอ้างอิงจากเอกสาร Standing Order ที่ผ่านการอนุมัติของโรงพยาบาลสุรินทร์: <strong>Norepinephrine</strong> (หน้า 94-96), <strong>Dopamine</strong> (FM-PH-02-010, 29/3/67), <strong>Dobutamine</strong> (FM-PH-02-012, 29/3/67), <strong>Adrenaline</strong> (FM-PH-02-011, ver. 2025) — ยังคงต้องยึดเอกสารต้นฉบับ (แท็บ "ใบ Standing order") เป็นหลักในการตัดสินใจทางคลินิกเสมอ เครื่องมือนี้เป็นตัวช่วยคำนวณเท่านั้น
+                ยาทั้ง 4 ชนิดอ้างอิงจากเอกสาร Doctor's Order Sheet (ยาความเสี่ยงสูง) ที่ผ่านการอนุมัติของโรงพยาบาลสุรินทร์: <strong>Norepinephrine</strong> (FH-PH-02-009 Rev.1, 22/5/69), <strong>Dopamine</strong> (FM-PH-02-010, 29/3/67), <strong>Dobutamine</strong> (FM-PH-02-012, 29/3/67), <strong>Adrenaline</strong> (FM-PH-02-011, 29/3/67) — ยังคงต้องยึดเอกสารต้นฉบับ (แท็บ "ใบ Standing order") เป็นหลักในการตัดสินใจทางคลินิกเสมอ เครื่องมือนี้เป็นตัวช่วยคำนวณเท่านั้น
             </div>
             <div class="approval-note">
                 จัดทำ/ทบทวนโดย: กลุ่มงานเภสัชสนเทศและงานพัฒนาระบบยา ฝ่ายเภสัชกรรม [ภญ.อมราพักตร์, นศภ.กนกพร] · ทบทวนล่าสุด: [27/7/69] · เวอร์ชัน 2.1 (เพิ่มใบ Standing Order จริงของ Dopamine/Dobutamine/Adrenaline และปรับสูตร/เกณฑ์ให้ตรงกับเอกสารที่อนุมัติแล้ว)
@@ -869,7 +869,7 @@
         var DRUGS = {
             ne: {
                 id: 'ne', shortName: 'Norepinephrine', thaiName: 'นอร์เอพิเนฟริน (Levophed)', badge: 'NE', color: '#1877f2',
-                standingOrderImg: 'protocol-sheet.jpg', standingOrderFilename: 'protocol-sheet.jpg',
+                standingOrderImg: 'protocol-sheet.jpg', standingOrderFilename: 'protocol-sheet.jpg', formNo: 'FH-PH-02-009 Rev.1',
                 presets: [
                     { value: 16, vol: 250, amp: 1, ampUnit: 'Ampoule', central: 0, label: '4:250 — 4 mg in D5W 246 mL (16 mcg/mL)', badgeClass: 'bg-green', badgeText: '4:250', prep: 'ใช้ D5W 250 mL ดูดออก 4 mL แล้วเติม Norepinephrine 1 amp (4 mg) ผสมให้เข้ากัน', reqAmp: 4 },
                     { value: 40, vol: 100, amp: 1, ampUnit: 'Ampoule', central: 1, label: '4:100 — 4 mg in D5W 96 mL (40 mcg/mL)', badgeClass: 'bg-yellow', badgeText: '4:100', prep: 'ใช้ D5W 96 mL ดูดออก 4 mL แล้วเติม Norepinephrine 1 amp (4 mg) ผสมให้เข้ากัน — ให้ทาง Central line เท่านั้น', reqAmp: 4 },
@@ -884,7 +884,7 @@
             },
             dopa: {
                 id: 'dopa', shortName: 'Dopamine', thaiName: 'โดพามีน (Intropin)', badge: 'DA', color: '#f57c00',
-                standingOrderImg: 'standing-order-dopamine.png', standingOrderFilename: 'standing-order-dopamine.png', formNo: 'FM-PH-02-010',
+                standingOrderImg: 'standing-order-dopamine.jpg', standingOrderFilename: 'standing-order-dopamine.jpg', formNo: 'FM-PH-02-010',
                 presets: [
                     { value: 1000, vol: 100, amp: 1, ampUnit: 'Ampoule (250 mg/10 mL)', central: 0, label: 'Dopamine 1:1 (100 mg/100 mL) — 1,000 mcg/mL', badgeClass: 'bg-green', badgeText: '1:1 (100mg)', prep: 'ดูดยา 4 mL (100 mg) จาก Dopamine 1 amp (250 mg/10 mL) เติมใน D5W หรือ NSS 96 mL ให้ครบ 100 mL' },
                     { value: 1000, vol: 250, amp: 1, ampUnit: 'Ampoule (250 mg/10 mL)', central: 0, label: 'Dopamine 1:1 (250 mg/250 mL) — 1,000 mcg/mL', badgeClass: 'bg-green', badgeText: '1:1 (250mg)', prep: 'ดูดยา 10 mL (250 mg = 1 amp เต็ม) เติมใน D5W หรือ NSS 240 mL ให้ครบ 250 mL' },
@@ -901,7 +901,7 @@
             },
             dobu: {
                 id: 'dobu', shortName: 'Dobutamine', thaiName: 'โดบูทามีน (Dobutrex)', badge: 'DB', color: '#388e3c',
-                standingOrderImg: 'standing-order-dobutamine.png', standingOrderFilename: 'standing-order-dobutamine.png', formNo: 'FM-PH-02-012',
+                standingOrderImg: 'standing-order-dobutamine.jpg', standingOrderFilename: 'standing-order-dobutamine.jpg', formNo: 'FM-PH-02-012',
                 presets: [
                     { value: 1000, vol: 100, amp: 1, ampUnit: 'Vial (250 mg/5 mL)', central: 0, label: 'Dobutamine 1:1 (100 mg/100 mL) — 1,000 mcg/mL', badgeClass: 'bg-green', badgeText: '1:1 (100mg)', prep: 'ดูดยา 2 mL (100 mg) จาก Dobutamine 1 vial (250 mg/5 mL) เติมใน D5W หรือ NSS 98 mL ให้ครบ 100 mL' },
                     { value: 1000, vol: 250, amp: 1, ampUnit: 'Vial (250 mg/5 mL)', central: 0, label: 'Dobutamine 1:1 (250 mg/250 mL) — 1,000 mcg/mL', badgeClass: 'bg-green', badgeText: '1:1 (250mg)', prep: 'ดูดยา 5 mL (250 mg = 1 vial เต็ม) เติมใน D5W หรือ NSS 245 mL ให้ครบ 250 mL' },
@@ -918,7 +918,7 @@
             },
             epi: {
                 id: 'epi', shortName: 'Adrenaline', thaiName: 'อะดรีนาลีน (Epinephrine)', badge: 'EPI', color: '#c62828',
-                standingOrderImg: 'standing-order-epinephrine.png', standingOrderFilename: 'standing-order-epinephrine.png', formNo: 'FM-PH-02-011',
+                standingOrderImg: 'standing-order-epinephrine.jpg', standingOrderFilename: 'standing-order-epinephrine.jpg', formNo: 'FM-PH-02-011',
                 presets: [
                     { value: 100, vol: 100, amp: 10, ampUnit: 'Ampoule (1 mg/1 mL)', central: 1, label: 'Adrenaline 1:10,000 (10 mg/100 mL) — 100 mcg/mL', badgeClass: 'bg-red', badgeText: '1:10,000', prep: 'ดูดสารละลาย D5W หรือ NSS ออก 10 mL จากถุง 100 mL แล้วเติม Adrenaline 10 amp (10 mg) ให้ครบ 100 mL — ให้ทาง Central line' },
                 ],
